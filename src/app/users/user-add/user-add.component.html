@@ -1,0 +1,14 @@
+<form [formGroup]="form">
+
+  <label for="firstName">First name</label>
+  <input type="text"
+         id="firstName"
+         formControlName="firstName">
+
+  <label for="lastName">Last name</label>
+  <input type="text"
+         id="lastName"
+         formControlName="lastName">
+
+  <button (click)="create()">Create</button>
+</form>

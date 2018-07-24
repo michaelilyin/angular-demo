@@ -1,0 +1,29 @@
+<h2>User list</h2>
+
+<input type="text" [(ngModel)]="term">
+<button (click)="search()">Search</button>
+
+<br/>
+
+<a routerLink="create">Create</a>
+
+<table>
+  <thead>
+  <tr>
+    <td>First name</td>
+    <td>Last name</td>
+    <td>Email</td>
+    <td>Phone</td>
+    <td>City</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users$ | async; trackBy: userTrack">
+    <td>{{user.firstName}}</td>
+    <td>{{user.lastName}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.phone}}</td>
+    <td>{{user.city}}</td>
+  </tr>
+  </tbody>
+</table>
